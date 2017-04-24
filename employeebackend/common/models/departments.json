@@ -1,0 +1,32 @@
+{
+  "name": "departments",
+  "plural": "departments",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "dept_no": {
+      "type": "string",
+      "required": true
+    },
+    "dept_name": {
+      "type": "string",
+      "required": true
+    },
+    "mgr_emp_no": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "employee": {
+      "type": "belongsTo",
+      "model": "employees",
+      "foreignKey": "empno"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
